@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px) and (max-width: 1023px)">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
+    <title>Contato</title>
+</head>
+
+<body>
+
+    <header>
+        <nav aria-label="Menu principal">
+            <div class="logo">
+                <a href="inicio.html">
+                    <img src="images/logo.png" alt="Página de Cadastro de Vulneráveis">Protege+</a>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="informacoes.html" class="nav-link">Informações</a></li>
+                    <li class="nav-item"><a href="cadastro_vulneraveis.html" class="nav-link">Cadastro</a></li>
+                    <li class="nav-item"><a href="chat.html" class="nav-link">Chat</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="images/menu.png" alt="Menu"></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                <li class="nav-item"><a href="informacoes.html" class="nav-link">Informações</a></li>
+                <li class="nav-item"><a href="cadastro_vulneraveis.html" class="nav-link">Cadastro</a></li>
+                <li class="nav-item"><a href="chat.html" class="nav-link">Chat</a></li>
+                <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </header>
+
+
+    <main>
+
+        <h1 class="titulo">Contato</h1>
+
+        <div class="box">
+            <form id="form-duvida">
+                <fieldset>
+
+                    <p class="descricao">
+                        Envie sua dúvida e entraremos em contato.
+                    </p>
+
+                    <div class="inputBox">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" name="nome" id="nome" class="inputUser">
+                        <span id="erroNome" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="inputUser">
+                        <span id="erroEmail" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" class="inputUser">
+                        <span id="erroTelefone" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="8" class="inputUserText"></textarea>
+                        <span id="erroMensagem" class="erro"></span>
+                    </div>
+
+                    <button type="button" onclick="validar()" class="btn btn-cont"
+                        aria-label="Enviar dúvida">Enviar</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo logo-footer">
+                <a href="inicio.html">
+                    <img src="images/logo.png" alt="Página de Cadastro de Vulneráveis">Protege+
+                </a>
+            </div>
+
+            <div class="footer-nav">
+                <a href="inicio.html" class="nav-link">Início</a>
+                <a href="faq.html" class="nav-link">Informações</a>
+                <a href="chat.html" class="nav-link">Cadastro</a>
+                <a href="chat.html" class="nav-link">Chat</a>
+                <a href="contato.html" class="nav-link">FAQ</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+                <a href="integrantes.html" class="nav-link">Integrantes</a>
+            </div>
+
+            <div class="footer-info">
+                <div class="titulo-coluna">
+                    <p>Números de Emergência</p>
+                </div>
+                <div class="numeros">
+                    <p>193 – Bombeiros | 199 – Defesa Civil </p>
+                    <p>192 – SAMU | 190 – Polícia </p>
+                </div>
+            </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

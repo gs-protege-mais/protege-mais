@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px) and (max-width: 1023px)">
+    <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
+    <title>Cadastro de Vulneráveis</title>
+</head>
+
+<body>
+
+    <header>
+        <nav aria-label="Menu principal">
+            <div class="logo">
+                <a href="inicio.html">
+                    <img src="images/logo.png" alt="Página de Cadastro de Vulneráveis">Protege+</a>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="informacoes.html" class="nav-link">Informações</a></li>
+                    <li class="nav-item"><a href="cadastro_vulneraveis.html" class="nav-link">Cadastro</a></li>
+                    <li class="nav-item"><a href="chat.html" class="nav-link">Chat</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+
+
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img class="icon" src="images/menu.png" alt="Menu"></button>
+            </div>
+        </nav>
+        <div class="mobile-menu">
+            <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="informacoes.html" class="nav-link">Informações</a></li>
+                    <li class="nav-item"><a href="cadastro_vulneraveis.html" class="nav-link">Cadastro</a></li>
+                    <li class="nav-item"><a href="chat.html" class="nav-link">Chat</a></li>
+                    <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
+                </ul>
+        </div>
+    </header>
+
+    <main>
+
+        <h1 class="titulo">Cadastro de Vulneráveis</h1>
+
+        <div class="box">
+            <form aria-label="Formulário de cadastro de usuário">
+                <fieldset>
+
+                    <div class="inputBox">
+                        <label for="nome">Seu nome completo</label>
+                        <input type="text" name="nome" id="nome" class="inputUser">
+                        <span id="erroNome" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="cpf">Seu CPF</label>
+                        <input type="text" name="cpf" id="cpf" class="inputUser">
+                        <span id="erroCPF" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="endereco">Endereço</label>
+                        <input type="text" name="endereco" id="endereco" class="inputUser">
+                        <span id="erroEndereco" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="telefone">Telefone</label>
+                        <input type="tel" name="telefone" id="telefone" class="inputUser">
+                        <span id="erroTelefone" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="inputUser">
+                        <span id="erroEmail" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="qtdPessoas">Quantas pessoas moram com você?</label>
+                        <input type="number" name="qtdPessoas" id="qtdPessoas" class="inputUser">
+                        <span id="erroQtdPessoas" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label>Você ou alguém da sua família possui alguma das condições abaixo?</label><br>
+
+                        <input type="checkbox" id="idoso" name="condicaoPessoa" value="idoso">
+                        <label for="idoso">Idoso(a)</label><br>
+
+                        <input type="checkbox" id="deficiente" name="condicaoPessoa" value="deficiente">
+                        <label for="deficiente">Pessoa com deficiência</label><br>
+
+                        <input type="checkbox" id="crianca" name="condicaoPessoa" value="crianca">
+                        <label for="crianca">Criança de até 6 anos</label><br>
+
+                        <input type="checkbox" id="gestante" name="condicaoPessoa" value="gestante">
+                        <label for="gestante">Gestante</label><br>
+
+                        <input type="checkbox" id="mobilidadeReduzida" name="condicaoPessoa" value="mobilidadeReduzida">
+                        <label for="mobilidadeReduzida">Pessoa com mobilidade reduzida</label><br>
+
+                        <input type="checkbox" id="doencaCronica" name="condicaoPessoa" value="doencaCronica">
+                        <label for="doencaCronica">Doença crônica grave</label><br>
+
+                        <input type="checkbox" id="nenhuma" name="condicaoPessoa" value="nenhuma">
+                        <label for="nenhuma">Nenhuma das opções</label><br>
+                    </div>
+
+                    <div class="inputBox">
+                        <label for="nomePessoa">Nome completo dessa pessoa</label>
+                        <input type="text" name="nomePessoa" id="nomePessoa" class="inputUser">
+                        <span id="erroNomePessoa" class="erro"></span>
+                    </div>
+                    <div class="inputBox">
+                        <label for="cpfPessoa">CPF da pessoa</label>
+                        <input type="text" name="cpfPessoa" id="cpfPessoa" class="inputUser">
+                        <span id="erroCPFPessoa" class="erro"></span>
+                    </div>
+
+                    <div class="inputBox">
+                        <label>A moradia está em área de risco (ex: encosta, beira de rio, região com histórico de
+                            enchentes ou queimadas)?</label><br>
+
+                        <input type="radio" id="riscoSim" name="areaRisco" value="sim">
+                        <label for="riscoSim">Sim</label><br>
+
+                        <input type="radio" id="riscoNao" name="areaRisco" value="nao">
+                        <label for="riscoNao">Não</label><br>
+
+                        <input type="radio" id="riscoNaoSei" name="areaRisco" value="naoSei">
+                        <label for="riscoNaoSei">Não sei</label><br>
+                    </div>
+
+                    <div class="inputBox">
+                        <label>Alguém da casa precisa de:</label><br>
+
+                        <input type="checkbox" id="necessidadeMedicamento" name="necessidadePessoa" value="medicamento">
+                        <label for="necessidadeMedicamento">Medicamentos contínuos</label><br>
+
+                        <input type="checkbox" id="necessidadeEquipamento" name="necessidadePessoa"
+                            value="equipamentoMedico">
+                        <label for="necessidadeEquipamento">Equipamentos médicos (ex: oxigênio)</label><br>
+
+                        <input type="checkbox" id="necessidadeAjuda" name="necessidadePessoa" value="ajuda">
+                        <label for="necessidadeAjuda">Ajuda para se locomover ou se comunicar</label><br>
+                    </div>
+
+                    <button type="submit" class="btn">Enviar</button>
+
+                </fieldset>
+            </form>
+        </div>
+    </main>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="logo logo-footer">
+                <a href="inicio.html">
+                    <img src="images/logo.png" alt="Página de Cadastro de Vulneráveis">Protege+
+                </a>
+            </div>
+
+            <div class="footer-nav">
+                <a href="inicio.html" class="nav-link">Início</a>
+                <a href="informacoes.html" class="nav-link">Informações</a>
+                <a href="cadastro_vulneraveis.html" class="nav-link">Cadastro</a>
+                <a href="chat.html" class="nav-link">Chat</a>
+                <a href="faq.html" class="nav-link">FAQ</a>
+                <a href="contato.html" class="nav-link">Contato</a>
+                <a href="integrantes.html"class="nav-link">Integrantes</a>
+            </div>
+
+            <div class="footer-info">
+                <div class="titulo-coluna">
+                    <p>Números de Emergência</p>
+                </div>
+                <div class="numeros">
+                    <p>193 – Bombeiros | 199 – Defesa Civil </p>
+                    <p>192 – SAMU | 190 – Polícia </p>
+                </div>
+            </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

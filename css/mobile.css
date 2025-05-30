@@ -1,0 +1,61 @@
+/* mobile -> max-width: 767px */
+
+
+/* navbar */
+nav {
+    padding: 1.3rem 2rem;
+}
+
+.nav-item {
+    display: none;
+}
+
+.mobile-menu {
+    display: none;
+    background-color: #A3BED7;
+    width: 100%;
+    position: absolute;
+    top: 100px;
+    z-index: 9999;
+}
+
+.mobile-menu-icon {
+    display: block;
+}
+
+.mobile-menu-icon button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 1rem;
+}
+
+.mobile-menu .nav-item {
+    display: block;
+    padding-top: 1.2rem;
+}
+
+.open {
+    display: block;
+}
+
+
+
+
+
+
+/* footer */
+
+.footer-container {
+    flex-direction: column;
+}
+ 
+.footer-info{
+    margin-top: 10px;
+}
