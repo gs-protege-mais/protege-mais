@@ -46,7 +46,40 @@ nav {
 }
 
 
+/* informacoes */
+/* 
+.noticias {
+    width: 500px;
+    flex-direction: column;
+    justify-content: center;
+}
 
+.noticia{
+    width: 300px;
+    margin: 0 auto;
+} 
+.imagem-noticia img {
+    width: 300px;
+}
+
+.texto-noticia{
+    text-align: center;
+    padding-bottom: 30px;
+} 
+
+ */
+
+
+
+/* tela inicial */
+
+.titulo-inicio {
+    font-size: 25px;
+}
+
+.botao-inicio a {
+    width: 80%;
+}
 
 
 

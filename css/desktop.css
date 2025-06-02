@@ -96,7 +96,6 @@ main {
 
 /* tela inicial */
 
-
 .texto-inicio {
     display: flex;
     margin: auto;
@@ -127,8 +126,6 @@ main {
     width: 450px;
     text-align: center;
 }
-
-
 
 
 
@@ -221,7 +218,6 @@ fieldset {
 
 }
 
-
 #container {
     display: flex;
     flex-direction: column;
@@ -302,25 +298,28 @@ fieldset {
 
 /* informacoes */
 
-/* .noticias {
+.noticias {
     display: flex;
     justify-content: center;
-    width: 1200px;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 90%;
+    gap: 1rem 5rem;
 }
 
 .noticia{
     width: 300px;
     text-align: center;
-    padding: 30px;
-} */
+
+} 
 .imagem-noticia img {
     width: 300px;
 }
 
-/* .texto-noticia{
+.texto-noticia{
     text-align: center;
-    padding-bottom: 30px;
-} */
+    padding-bottom: 50px;
+} 
 
 
 
