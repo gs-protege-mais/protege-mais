@@ -28,3 +28,11 @@ accordions.forEach(accordion => {
 })
 
 
+// etapas formulário
+
+  function mostrarEtapa(etapa) {
+    const steps = document.querySelectorAll('.step');
+    steps.forEach(s => s.style.display = 'none');
+
+    document.getElementById('step' + etapa).style.display = 'block';
+  }
