@@ -154,7 +154,6 @@ fieldset {
     border-radius: 5px;
     padding: 2rem;
     background-color: #A7C7A9;
-
 }
 
 .inputUser {
@@ -167,12 +166,32 @@ fieldset {
 }
 
 .inputBox {
-    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.selecao{
+    padding-bottom: 7px;
+}
+
+.butaozinhos{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .btn {
-    color: #000;
     background-color: #A3BED7;
+    padding: 1rem 1.5rem;
+    border: 1px solid #000;   
+    color: #000;
+    border-radius: 6px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+.btn-next{
+    color: #000;
+    background-color: #80a5e9;
     padding: 1rem 1.5rem;
     border: 1px solid #000;
     border-radius: 6px;
@@ -180,11 +199,13 @@ fieldset {
     cursor: pointer;
 }
 
+.margin{
+    margin-top: 30px;
+}
+
 .btn:hover {
     color: #d8a7b1;
 }
-
-
 
 
 

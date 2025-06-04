@@ -84,7 +84,7 @@
                             <span id="erroQtdPessoas" class="erro"></span>
                         </div>
 
-                        <button type="button" class="btn" onclick="mostrarEtapa(2)">Próximo</button>
+                        <button type="button" class="btn-next margin" onclick=" mostrarEtapa(2)">Próximo</button>
                     </div>
 
                     <div class="step" id="step2" style="display: none;">
@@ -92,27 +92,41 @@
                         <div class="inputBox">
                             <label>Você ou alguém da sua família possui alguma das condições abaixo?</label><br>
 
-                            <input type="checkbox" id="idoso" name="condicaoPessoa" value="idoso">
-                            <label for="idoso">Idoso(a)</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="idoso" name="condicaoPessoa" value="idoso">
+                                <label for="idoso">Idoso(a)</label>
+                            </div>
 
-                            <input type="checkbox" id="deficiente" name="condicaoPessoa" value="deficiente">
-                            <label for="deficiente">Pessoa com deficiência</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="deficiente" name="condicaoPessoa" value="deficiente">
+                                <label for="deficiente">Pessoa com deficiência</label>
+                            </div>
 
-                            <input type="checkbox" id="crianca" name="condicaoPessoa" value="crianca">
-                            <label for="crianca">Criança de até 6 anos</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="crianca" name="condicaoPessoa" value="crianca">
+                                <label for="crianca">Criança de até 6 anos</label>
+                            </div>
 
-                            <input type="checkbox" id="gestante" name="condicaoPessoa" value="gestante">
-                            <label for="gestante">Gestante</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="gestante" name="condicaoPessoa" value="gestante">
+                                <label for="gestante">Gestante</label>
+                            </div>
 
-                            <input type="checkbox" id="mobilidadeReduzida" name="condicaoPessoa"
-                                value="mobilidadeReduzida">
-                            <label for="mobilidadeReduzida">Pessoa com mobilidade reduzida</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="mobilidadeReduzida" name="condicaoPessoa"
+                                    value="mobilidadeReduzida">
+                                <label for="mobilidadeReduzida">Pessoa com mobilidade reduzida</label>
+                            </div>
 
-                            <input type="checkbox" id="doencaCronica" name="condicaoPessoa" value="doencaCronica">
-                            <label for="doencaCronica">Doença crônica grave</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="doencaCronica" name="condicaoPessoa" value="doencaCronica">
+                                <label for="doencaCronica">Doença crônica grave</label>
+                            </div>
 
-                            <input type="checkbox" id="nenhuma" name="condicaoPessoa" value="nenhuma">
-                            <label for="nenhuma">Nenhuma das opções</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="nenhuma" name="condicaoPessoa" value="nenhuma">
+                                <label for="nenhuma">Nenhuma das opções</label>
+                            </div>
                         </div>
 
                         <div class="inputBox">
@@ -127,39 +141,57 @@
                         </div>
 
                         <div class="inputBox">
-                            <label>A moradia está em área de risco (ex: encosta, beira de rio, região com histórico de
+                            <label>A moradia está em área de risco (ex: encosta, beira de rio, região com histórico
+                                de
                                 enchentes ou queimadas)?</label><br>
 
-                            <input type="radio" id="riscoSim" name="areaRisco" value="sim">
-                            <label for="riscoSim">Sim</label><br>
 
-                            <input type="radio" id="riscoNao" name="areaRisco" value="nao">
-                            <label for="riscoNao">Não</label><br>
+                            <div class="selecao">
+                                <input type="radio" id="riscoSim" name="areaRisco" value="sim">
+                                <label for="riscoSim">Sim</label>
+                            </div>
 
-                            <input type="radio" id="riscoNaoSei" name="areaRisco" value="naoSei">
-                            <label for="riscoNaoSei">Não sei</label><br>
+
+                            <div class="selecao">
+                                <input type="radio" id="riscoNao" name="areaRisco" value="nao">
+                                <label for="riscoNao">Não</label>
+                            </div>
+
+
+                            <div class="selecao">
+                                <input type="radio" id="riscoNaoSei" name="areaRisco" value="naoSei">
+                                <label for="riscoNaoSei">Não sei</label>
+                            </div>
                         </div>
-
                         <div class="inputBox">
-                            <label>Alguém da casa precisa de:</label><br>
+                            <label>Alguém da casa precisa de:</label>
 
-                            <input type="checkbox" id="necessidadeMedicamento" name="necessidadePessoa"
-                                value="medicamento">
-                            <label for="necessidadeMedicamento">Medicamentos contínuos</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="necessidadeMedicamento" name="necessidadePessoa"
+                                    value="medicamento">
+                                <label for="necessidadeMedicamento">Medicamentos contínuos</label>
+                            </div>
 
-                            <input type="checkbox" id="necessidadeEquipamento" name="necessidadePessoa"
-                                value="equipamentoMedico">
-                            <label for="necessidadeEquipamento">Equipamentos médicos (ex: oxigênio)</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="necessidadeEquipamento" name="necessidadePessoa"
+                                    value="equipamentoMedico">
+                                <label for="necessidadeEquipamento">Equipamentos médicos (ex:
+                                    oxigênio)</label>
+                            </div>
 
-                            <input type="checkbox" id="necessidadeAjuda" name="necessidadePessoa" value="ajuda">
-                            <label for="necessidadeAjuda">Ajuda para se locomover ou se comunicar</label><br>
+                            <div class="selecao">
+                                <input type="checkbox" id="necessidadeAjuda" name="necessidadePessoa" value="ajuda">
+                                <label for="necessidadeAjuda">Ajuda para se locomover ou se
+                                    comunicar</label>
+                            </div>
+                        </div>
+                        <div class="butaozinhos">
+                            <button type="button" class="btn-next" onclick="mostrarEtapa(1)">Voltar</button>
+
+                            <button type="submit" class="btn">Enviar</button>
                         </div>
 
-                        <button type="button" class="btn" onclick="mostrarEtapa(1)">Voltar</button>
-
-                        <button type="submit" class="btn">Enviar</button>
                     </div>
-
                 </fieldset>
             </form>
         </div>
