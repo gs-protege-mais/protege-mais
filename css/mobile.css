@@ -74,6 +74,31 @@ nav {
 
 
 
+/* integrantes */
+
+.container-perfis {
+    display: flex;
+    padding: 0 2rem;
+    padding-bottom: 3rem;
+    flex-direction: column;
+    gap: 4rem;
+    margin-top: 1.5rem;
+    font-size: 18px;
+}
+
+.foto {
+    width: 180px;
+    height: 240px;
+}
+
+
+.info {
+    font-family: "Jost", sans-serif;
+    margin: auto 12px;
+}
+
+
+
 /* cadastro */
 
 .titulo {
@@ -107,12 +132,46 @@ fieldset {
 
 
 
+
+
 /* footer */
 
+footer {
+    background-color: #A3BED7;
+    color: #000;
+    padding: 2rem 1rem;
+    font-family: "Inter", sans-serif;
+}
+
 .footer-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.footer-nav-title {
+    font-size: 20px;
+    text-align: center;
+}
+
+.footer-links {
+    display: flex;
     flex-direction: column;
 }
 
-.footer-info {
-    margin-top: 10px;
+.footer-links a {
+    color: #000;
+    padding-top: 8px;
+    text-align: center;
+}
+
+.numeros p {
+    padding-top: 8px;
+    text-align: center;
+}
+
+.coluna-link,
+.coluna {
+    margin: 30px auto;
+
 }

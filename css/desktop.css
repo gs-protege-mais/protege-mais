@@ -35,8 +35,8 @@ nav {
 .logo {
     display: flex;
     align-items: center;
-    /* gap: 15px; */
     height: 100%;
+    margin: auto 0;
 }
 
 .logo img {
@@ -103,7 +103,7 @@ main {
     width: 80%;
     font-size: 20px;
     padding-bottom: 30px;
-   
+
 }
 
 .titulo-inicio {
@@ -169,11 +169,11 @@ fieldset {
     margin-top: 20px;
 }
 
-.selecao{
+.selecao {
     padding-bottom: 7px;
 }
 
-.butaozinhos{
+.butaozinhos {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
@@ -182,14 +182,14 @@ fieldset {
 .btn {
     background-color: #A3BED7;
     padding: 1rem 1.5rem;
-    border: 1px solid #000;   
+    border: 1px solid #000;
     color: #000;
     border-radius: 6px;
     font-size: 17px;
     cursor: pointer;
 }
 
-.btn-next{
+.btn-next {
     color: #000;
     background-color: #80a5e9;
     padding: 1rem 1.5rem;
@@ -199,7 +199,7 @@ fieldset {
     cursor: pointer;
 }
 
-.margin{
+.margin {
     margin-top: 30px;
 }
 
@@ -329,73 +329,56 @@ fieldset {
     gap: 1rem 5rem;
 }
 
-.noticia{
+.noticia {
     width: 300px;
     text-align: center;
 
-} 
+}
+
 .imagem-noticia img {
     width: 300px;
 }
 
-.texto-noticia{
+.texto-noticia {
     text-align: center;
     padding-bottom: 50px;
-} 
+}
 
 
 
 /* footer */
 
 footer {
-    background-color: #A3BED7;
+    background-color: #A3BED7;;
     color: #000;
-    padding: 2rem 1rem;
+    padding: 3rem 2rem;
     font-family: "Inter", sans-serif;
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
-    gap: 2rem;
+    width: 1300px;
     margin: 0 auto;
 }
 
-.logo-footer {
-    margin: auto 0;
-}
-
-.footer-nav {
-    width: 200px;
+.footer-nav-title {
     font-size: 20px;
-    margin: 0 auto;
 }
 
-.footer-nav a {
+.footer-links {
     display: flex;
     flex-direction: column;
+}
+
+.footer-links a {
     color: #000;
-    align-items: center;
-    padding: 2px 0;
-}
-
-.footer-nav a:hover {
-    color: #d8a7b1;
-}
-
-.footer-info {
-    margin: auto;
-}
-
-.titulo-coluna {
-    font-weight: bold;
-    font-size: 25px;
-}
-
-.numeros {
-    font-size: 20px;
+    padding-top: 8px;
 }
 
 .numeros p {
-    margin-top: 10px;
+    padding-top: 8px;
+}
+
+.coluna-link, .coluna{
+    margin: auto;
 }

@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="css/desktop.css">
     <link rel="stylesheet" href="css/tablet.css" media="(min-width: 768px) and (max-width: 1023px)">
     <link rel="stylesheet" href="css/mobile.css" media="(max-width: 767px)">
-    <title>Início</title>
+    <title>Cadastro de Vulneráveis</title>
 </head>
 
 <body>
+
     <header>
         <nav aria-label="Menu principal">
             <div class="logo">
@@ -45,25 +46,8 @@
 
     <main>
 
-        <h1 class="titulo-inicio">Olá, seja bem-vindo ao Protege+</h1>
-        <p class="texto-inicio ">Este site tem como objetivo manter você informado e preparado para desastres naturais.
-            Aqui, você também pode
-            cadastrar familiares que precisam de ajuda prioritária em casos de emergência</p>
+        <div id="chat-container" style="height: 500px; width: 100%;"></div>
 
-        <div class="botoes">
-            <div class="botao-inicio">
-                <a href="informacoes.html">Informações sobre queimadas e enchentes</a>
-            </div>
-            <div class="botao-inicio">
-                <a href="chatbot.html">Chat para dúvidas</a>
-            </div>
-            <div class="botao-inicio">
-                <a href="cadastro_prioritario.html">Cadastrar familiares com prioridade</a>
-            </div>
-            <div class="botao-inicio">
-                <a href="">O que fazer antes, durante e depois de uma desastre?</a>
-            </div>
-        </div>
 
     </main>
 
@@ -108,6 +92,25 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        window.watsonAssistantChatOptions = {
+            integrationID: "82a3ca7e-7681-4bcb-9959-2315c8d712e8", // The ID of this integration.
+            region: "us-south", // The region your integration is hosted in.
+            serviceInstanceID: "85a6d149-d111-4b6e-9168-e4043ea54dc1", // The ID of your service instance.
+            element: document.getElementById('chat-container'),
+            hideCloseButton: true,
+            showRestartButton: true,
+            openChatByDefault: true,
+            onLoad: function (instance) { instance.render(); }
+        };
+        setTimeout(function () {
+            const t = document.createElement('script');
+            t.src = "https://web-chat.global.assistant.watson.appdomain.cloud/versions/latest/WatsonAssistantChatEntry.js";
+            document.head.appendChild(t);
+        });
+
+    </script>
 
     <script src="js/script.js"></script>
 
