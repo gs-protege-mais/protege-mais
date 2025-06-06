@@ -1,0 +1,21 @@
+/* tablet -> min-width: 768px e max-width: 1024px */
+
+.container-perfis {
+    gap: 3rem;
+    padding: 1rem 0 4rem 0;  
+}
+
+
+/* cadastro */
+
+.box {
+    width: 53%;
+    font-size: 1.2rem;
+}
+
+/* faq */
+
+#container {
+    gap: 20px;
+    width: 55%;
+}

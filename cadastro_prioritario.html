@@ -15,27 +15,28 @@
     <header>
         <nav aria-label="Menu principal">
             <div class="logo">
-                <a href="inicio.html">
-                    <img src="images/logo.png" alt="Página de Cadastro de Vulneráveis">Protege+</a>
+                <a href="index.html">
+                    <img src="images/logo.png" alt="Página de Cadastro de Vulneráveis">Protege+
+                </a>
             </div>
 
             <div class="nav-list">
                 <ul>
-                    <li class="nav-item"><a href="informacoes.html" class="nav-link">Informações</a></li>
+                    <li class="nav-item"><a href="informacoes.html" class="nav-link">Notícias</a></li>
                     <li class="nav-item"><a href="cadastro_prioritario.html" class="nav-link">Cadastro</a></li>
                     <li class="nav-item"><a href="chatbot.html" class="nav-link">Chat</a></li>
                     <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
                     <li class="nav-item"><a href="contato.html" class="nav-link">Contato</a></li>
                 </ul>
             </div>
-            
+
             <div class="mobile-menu-icon">
                 <button onclick="menuShow()"><img class="icon" src="images/menu.png" alt="Menu"></button>
             </div>
         </nav>
         <div class="mobile-menu">
             <ul>
-                <li class="nav-item"><a href="informacoes.html" class="nav-link">Informações</a></li>
+                <li class="nav-item"><a href="informacoes.html" class="nav-link">Notícias</a></li>
                 <li class="nav-item"><a href="cadastro_prioritario.html" class="nav-link">Cadastro</a></li>
                 <li class="nav-item"><a href="chatbot.html" class="nav-link">Chat</a></li>
                 <li class="nav-item"><a href="faq.html" class="nav-link">FAQ</a></li>
@@ -50,7 +51,7 @@
         <h1 class="titulo">Cadastro Prioritário</h1>
 
         <div class="box">
-            <form aria-label="Formulário de cadastro para pessoas com prioridade">
+            <form id="validarCadastro" aria-label="Formulário de cadastro para pessoas com prioridade">
                 <fieldset>
                     <div class="step" id="step1">
                         <div class="inputBox">
@@ -84,13 +85,13 @@
                             <span id="erroQtdPessoas" class="erro"></span>
                         </div>
 
-                        <button type="button" class="btn-next margin" onclick=" mostrarEtapa(2)">Próximo</button>
+                        <button type="button" class="btn next" onclick=" mostrarEtapa(2)">Próximo</button>
                     </div>
 
-                    <div class="step" id="step2" style="display: none;">
+                    <div class="step" id="step2">
 
                         <div class="inputBox">
-                            <label>Você ou alguém da sua família possui alguma das condições abaixo?</label><br>
+                            <p>Você ou alguém da sua família possui alguma das condições abaixo?</p><br>
 
                             <div class="selecao">
                                 <input type="checkbox" id="idoso" name="condicaoPessoa" value="idoso">
@@ -141,9 +142,9 @@
                         </div>
 
                         <div class="inputBox">
-                            <label>A moradia está em área de risco (ex: encosta, beira de rio, região com histórico
+                            <p>A moradia está em área de risco (ex: encosta, beira de rio, região com histórico
                                 de
-                                enchentes ou queimadas)?</label><br>
+                                enchentes ou queimadas)?</p><br>
 
 
                             <div class="selecao">
@@ -164,7 +165,7 @@
                             </div>
                         </div>
                         <div class="inputBox">
-                            <label>Alguém da casa precisa de:</label>
+                            <p>Alguém da casa precisa de:</p>
 
                             <div class="selecao">
                                 <input type="checkbox" id="necessidadeMedicamento" name="necessidadePessoa"
@@ -185,11 +186,9 @@
                                     comunicar</label>
                             </div>
                         </div>
-                        <div class="butaozinhos">
-                            <button type="button" class="btn-next" onclick="mostrarEtapa(1)">Voltar</button>
+                        <button type="button" class="btn next" onclick="mostrarEtapa(1)">Voltar</button>
+                        <button type="submit" class="btn enviar">Enviar</button>
 
-                            <button type="submit" class="btn">Enviar</button>
-                        </div>
 
                     </div>
                 </fieldset>
@@ -209,7 +208,7 @@
                 <p class="footer-nav-title">Projeto</p>
 
                 <div class="footer-links">
-                    <a href="informacoes.html">Informações</a>
+                    <a href="informacoes.html">Notícias</a>
                     <a href="cadastro_prioritario.html">Cadastro</a>
                     <a href="integrantes.html">Integrantes</a>
                 </div>
@@ -220,8 +219,8 @@
                 <p class="footer-nav-title">Suporte</p>
 
                 <div class="footer-links">
-                    <a href="faq.html">FAQ</a>
-                    <a href="chatbot.html">Chat</a>
+                    <a href="faq.html" class="peq">FAQ</a>
+                    <a href="chatbot.html" class="peq">Chat</a>
                     <a href="contato.html">Contato</a>
                 </div>
             </div>

@@ -11,6 +11,7 @@ nav {
 }
 
 .mobile-menu {
+    font-family: "Jost", sans-serif;
     display: none;
     background-color: #A3BED7;
     width: 100%;
@@ -38,7 +39,7 @@ nav {
 
 .mobile-menu .nav-item {
     display: block;
-    padding-top: 1.2rem;
+    padding-top: .8rem;
 }
 
 .open {
@@ -68,10 +69,8 @@ nav {
     flex-direction: column;
     gap: 22px;
     width: 315px;
-    padding: 0 17px 30px;
+    padding: 0 30px 30px;
 }
-
-
 
 
 /* integrantes */
@@ -93,7 +92,7 @@ nav {
 
 
 .info {
-    font-family: "Jost", sans-serif;
+    /* font-family: "Jost", sans-serif; */
     margin: auto 12px;
 }
 
@@ -104,22 +103,22 @@ nav {
 .titulo {
     padding: 35px 0;
     text-align: center;
+    font-size: 30px;
 }
 
 .box {
-    width: 285px;
+    max-width: 70%;
     font-size: 1.23rem;
     padding-bottom: 60px;
 }
 
 fieldset {
-
-    padding: 1.6rem;
+    padding: 1.3rem;
 }
 
 .inputUser {
-    height: 1.55rem;
-    font-size: 13px;
+    height: 1.7rem;
+    font-size: 18px;
 }
 
 .inputBox {
@@ -130,7 +129,9 @@ fieldset {
     padding: .8rem 1.2rem;
 }
 
-
+.inputUserText {
+    margin-bottom: -10px;
+}
 
 
 
@@ -140,7 +141,6 @@ footer {
     background-color: #A3BED7;
     color: #000;
     padding: 2rem 1rem;
-    font-family: "Inter", sans-serif;
 }
 
 .footer-container {
@@ -150,7 +150,7 @@ footer {
 }
 
 .footer-nav-title {
-    font-size: 20px;
+    font-size: 23px;
     text-align: center;
 }
 
@@ -159,19 +159,22 @@ footer {
     flex-direction: column;
 }
 
-.footer-links a {
-    color: #000;
-    padding-top: 8px;
+.footer-links a,
+.numeros p {
     text-align: center;
 }
 
-.numeros p {
-    padding-top: 8px;
-    text-align: center;
-}
 
 .coluna-link,
 .coluna {
-    margin: 30px auto;
+    margin: 25px auto;
+}
 
+.footer-links a::after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.footer-links .peq:hover::after {
+    width: 50%;
 }
