@@ -23,30 +23,12 @@ accordions.forEach(accordion => {
 
         body.classList.toggle('active');
         arrow.classList.toggle('rotate');
-
     })
 })
 
-
-// etapas formulário
-
-function mostrarEtapa(etapa) {
-    const steps = document.querySelectorAll('.step');
-    steps.forEach(s => s.style.display = 'none');
-
-    document.getElementById('step' + etapa).style.display = 'block';
-}
-
-
-
 // contato
 
-document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById('enviarContato').addEventListener('click', validarContato);
-});
-
 function validarContato() {
-
     let valido = true;
 
     const nome = document.getElementById('nome');
@@ -59,10 +41,7 @@ function validarContato() {
     const erroTelefone = document.getElementById('erroTelefone');
     const erroMensagem = document.getElementById('erroMensagem');
 
-    erroNome.textContent = '';
-    erroEmail.textContent = '';
-    erroTelefone.textContent = '';
-    erroMensagem.textContent = '';
+    document.querySelectorAll(".erro").forEach(span => span.textContent = "");
 
     if (nome.value.trim() === '') {
         erroNome.textContent = 'Por favor, preencha o nome.';
@@ -95,27 +74,154 @@ function validarContato() {
 
 
 
-// function validarCadastro(){
-//     const formulario = document.getElementById('meuFormulario');
-//     const checkboxes = document.querySelectorAll('input[name="condicaoPessoa"]');
-//     const mensagemErro = document.getElementById('mensagemErro');
+// Form
 
-//     formulario.addEventListener('submit', function(evento) {
-//         let peloMenosUmSelecionado = false;
+function validarEtapa1() {
+    let valido = true;
 
-//         checkboxes.forEach((checkbox) => {
-//             if (checkbox.checked) {
-//                 peloMenosUmSelecionado = true;
-//             }
-//         });
+    const nome = document.getElementById('nome');
+    const cpf = document.getElementById('cpf');
+    const endereco = document.getElementById('endereco');
+    const telefone = document.getElementById('telefone');
+    const email = document.getElementById('email');
+    const qtdPessoas = document.getElementById('qtdPessoas');
 
-//         if (!peloMenosUmSelecionado) {
-//             evento.preventDefault(); // Impede envio
-//             mensagemErro.style.display = 'block';
-//         } else {
-//             mensagemErro.style.display = 'none'; // Esconde erro se estiver tudo certo
-//         }
-//     });
+    const erroNome = document.getElementById('erroNome');
+    const erroCPF = document.getElementById('erroCPF');
+    const erroEndereco = document.getElementById('erroEndereco');
+    const erroTelefone = document.getElementById('erroTelefone');
+    const erroEmail = document.getElementById('erroEmail');
+    const erroQtdPessoas = document.getElementById('erroQtdPessoas');
+
+    document.querySelectorAll(".erro").forEach(span => span.textContent = "");
 
 
-// }
+    if (nome.value.trim() === '') {
+        erroNome.textContent = 'Por favor, preencha seu nome.';
+        valido = false;
+    }
+
+    if (cpf.value.trim() === '') {
+        erroCPF.textContent = 'Por favor, preencha seu CPF.';
+        valido = false;
+    }
+
+    if (endereco.value.trim() === '') {
+        erroEndereco.textContent = 'Por favor, preencha seu endereço.';
+        valido = false;
+    }
+
+    if (telefone.value.trim() === '') {
+        erroTelefone.textContent = 'Por favor, preencha o telefone.';
+        valido = false;
+    }
+
+    if (email.value.trim() === '') {
+        erroEmail.textContent = 'Por favor, preencha o email.';
+        valido = false;
+    } else if (!email.value.includes('@') || !email.value.includes('.')) {
+        erroEmail.textContent = 'Digite um email válido.';
+        valido = false;
+    }
+
+    if (qtdPessoas.value.trim() === '') {
+        erroQtdPessoas.textContent = 'Por favor, informe a quantidade de pessoas.';
+        valido = false;
+    }
+
+    if (valido) {
+        document.getElementById('step1').style.display = 'none';
+        document.getElementById('step2').style.display = 'block';
+    }
+}
+
+
+function validarEtapa2() {
+    let valido = true;
+
+    const nomePessoa = document.getElementById('nomePessoa');
+    const cpfPessoa = document.getElementById('cpfPessoa');
+
+    const erronomePessoa = document.getElementById('erroNomePessoa');
+    const erroCPFPessoa = document.getElementById('erroCPFPessoa');
+
+    document.querySelectorAll('.erro').forEach(span => span.textContent = '');
+
+    const checkboxesCondicao = document.querySelectorAll('input[name="condicaoPessoa"]');
+    let algumaCondicaoSelecionada = false;
+
+    checkboxesCondicao.forEach(cb => {
+        if (cb.checked) {
+            algumaCondicaoSelecionada = true;
+        }
+    });
+
+    if (!algumaCondicaoSelecionada) {
+        document.getElementById('erroCondicaoPessoa').textContent = 'Selecione pelo menos uma condição';
+        valido = false;
+    }
+
+
+    if (nomePessoa.value.trim() === '') {
+        erronomePessoa.textContent = 'Por favor, preencha o nome.';
+        valido = false;
+    }
+
+    if (cpfPessoa.value.trim() === '') {
+        erroCPFPessoa.textContent = 'Por favor, preencha o CPF.';
+        valido = false;
+    }
+
+    const radiosAreaRisco = document.getElementsByName('areaRisco');
+    let areaRiscoSelecionado = false;
+
+    for (let radio of radiosAreaRisco) {
+        if (radio.checked) {
+            areaRiscoSelecionado = true;
+            break;
+        }
+    }
+
+    if (!areaRiscoSelecionado) {
+        document.getElementById('erroAreaRisco').textContent = 'Por favor, selecione uma opção.';
+        valido = false;
+    }
+
+    const checkboxesNecessidade = document.querySelectorAll('input[name="necessidadePessoa"]');
+    let algumaNecessidadeMarcada = false;
+
+    checkboxesNecessidade.forEach(cb => {
+        if (cb.checked) {
+            algumaNecessidadeMarcada = true;
+        }
+    });
+
+    if (!algumaNecessidadeMarcada) {
+        document.getElementById('erroNecessidade').textContent = 'Selecione pelo menos uma necessidade.';
+        valido = false;
+    }
+
+    if (valido) {
+        alert('Formulário enviado com sucesso!');
+        document.getElementById('validarCadastro').submit();
+    }
+}
+
+document.addEventListener('DOMContentLoaded', function () {
+    const btnContato = document.getElementById('validarContato');
+    if (btnContato) {
+        btnContato.addEventListener('click', validarContato);
+    }
+
+    const btnEtapa1 = document.getElementById('btnProximo');
+    if (btnEtapa1) {
+        btnEtapa1.addEventListener('click', validarEtapa1);
+    }
+
+    const btnEtapa2 = document.getElementById('btnEnviarEtapa2');
+    if (btnEtapa2) {
+        btnEtapa2.addEventListener('click', validarEtapa2);
+    }
+});
+
+

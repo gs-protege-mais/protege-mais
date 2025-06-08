@@ -85,13 +85,14 @@
                             <span id="erroQtdPessoas" class="erro"></span>
                         </div>
 
-                        <button type="button" class="btn next" onclick=" mostrarEtapa(2)">Próximo</button>
+                        <button type="button" class="btn next" id="btnProximo">Próximo</button>
                     </div>
 
                     <div class="step" id="step2">
 
                         <div class="inputBox">
                             <p>Você ou alguém da sua família possui alguma das condições abaixo?</p><br>
+                            <span id="erroCondicaoPessoa" class="erro"></span>
 
                             <div class="selecao">
                                 <input type="checkbox" id="idoso" name="condicaoPessoa" value="idoso">
@@ -145,6 +146,7 @@
                             <p>A moradia está em área de risco (ex: encosta, beira de rio, região com histórico
                                 de
                                 enchentes ou queimadas)?</p><br>
+                            <span id="erroAreaRisco" class="erro"></span>
 
 
                             <div class="selecao">
@@ -163,9 +165,12 @@
                                 <input type="radio" id="riscoNaoSei" name="areaRisco" value="naoSei">
                                 <label for="riscoNaoSei">Não sei</label>
                             </div>
+
                         </div>
                         <div class="inputBox">
                             <p>Alguém da casa precisa de:</p>
+
+                            <span id="erroNecessidade" class="erro"></span>
 
                             <div class="selecao">
                                 <input type="checkbox" id="necessidadeMedicamento" name="necessidadePessoa"
@@ -186,8 +191,8 @@
                                     comunicar</label>
                             </div>
                         </div>
-                        <button type="button" class="btn next" onclick="mostrarEtapa(1)">Voltar</button>
-                        <button type="submit" class="btn enviar">Enviar</button>
+                        <button type="button" class="btn next" id="btnVoltar">Voltar</button>
+                        <button type="button" class="btn enviar" id="btnEnviarEtapa2">Enviar</button>
 
 
                     </div>
